@@ -11,6 +11,10 @@
 # Object analysis some work
 ![Screenshot 2024-01-17 182714](https://github.com/baiju012/Machine-Learning/assets/111991510/95e517f3-d43d-4aa2-beb7-14356024b84d)
 
+# Spam or Ham
+# Chatboat
+# Genrate newthing
+
 
 
 
