@@ -8,5 +8,9 @@
 # Image recognition
 ![Screenshot 2024-02-29 085800](https://github.com/baiju012/Machine-Learning/assets/111991510/d929696a-7a7a-403d-82f5-69a1707ebd5c)
 
+# Object analysis
+![Screenshot 2024-01-17 182714](https://github.com/baiju012/Machine-Learning/assets/111991510/95e517f3-d43d-4aa2-beb7-14356024b84d)
+
+
 
 
