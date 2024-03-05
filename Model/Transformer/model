@@ -47,6 +47,7 @@ TRAnsormers process sequences fix/variable
 Efficiency misnomer-- size does not matter
 Masked Autoencoders are Scalable vision learner.
 Linear algebra with Transformers
+ConvNeXt Standerd of CNN may say cnn godby
 Adaptation, causality manifold hypothesis, denoising autoencoder
 Auantization infinite codebook, pearsons pointclouds.
 Vision Transformers work- multi head self attention and convolutions
@@ -60,13 +61,19 @@ DALL-2 secret language
 Machine translation for a 1000 languages.
 Stable diffusion - Latent Diffusion 
 Beyond neural scaling laws
-Make a video text to video generation without text video data ----from metaAI and Image video from google brain
+Make a video text to video generation without text video data ----from metaAI and Image video from google brain--Movie Diffusion
 Generate long form video with transformers  ----- tasq.ai
 Paella: text to image FASTER than diffusion models 
-ChatGPT vs Sparrow Battle of Chatbots
+ChatGPT vs Sparrow--Battle of Chatbots
 VeLO to train optimizer
 
 GPTZero dected text by chatGPT Watermarking Language model
-Language model limitation
-STRATEGO
-
+Language model limitation GPT fail
+STRATEGO : DeepNash -- multi reinforsment learning
+Moral Self-Correction in Large Language Models:RLHF, Prompting,CoT
+Eight thing to Know about Large Language models: gpt3 20000 time more compute than gpt2: Emergent of large language model:few shot in context learning
+stochatic parrots languare model be too big:learn and use representation of the outside world:no reliable techiniques for steering the behavior RLHF reinfo,learn,human,feedback.--Sycophancy, sandbagging
+MM-SHAP measure modality contrigutions.
+GPT is not an intelligent agent.
+Competitive level programing solutions using LLMs, Numerical reasoning in LLMs, Pretraining on Downstream data,
+Deep mind google:The State of Vision and laguage,When a language model is language model, Is attention really all you need,Parsing in era of LLMs, NLP applied to astrophysics, graphs matter in LLMs
