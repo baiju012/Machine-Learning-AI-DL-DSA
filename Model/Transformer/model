@@ -77,3 +77,10 @@ MM-SHAP measure modality contrigutions.
 GPT is not an intelligent agent.
 Competitive level programing solutions using LLMs, Numerical reasoning in LLMs, Pretraining on Downstream data,
 Deep mind google:The State of Vision and laguage,When a language model is language model, Is attention really all you need,Parsing in era of LLMs, NLP applied to astrophysics, graphs matter in LLMs
+AI regulation act law in EU
+Curse of recursion trainning on generated data makes models forget
+BAIR,Mamba
+LoRA: Low rank adaptation comes in handy for tuning huge language models, LLM are gen chatgpt,llama2,claude,falcon.. Lora is tricky adding some diffrent::Adepter, prefix tuning
+PaLM:540B,GPT-3:175B: GPT-2:1.5B all are train first on parameter
+DALL-E3 has many improvement over DaLL-2 improve image genration
+DALL-E 3 short synthetic stable difiusion same by google dalle by openai
