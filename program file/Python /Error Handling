@@ -1,0 +1,34 @@
+This artical will cover the three clauses try,except and finally use for error handling
+try and except
+
+try: clause above tries to execute the code to print sum of the list 
+except: In case of try clause run into an error , the code under except execute.
+finally: finally clause execute a block regardless of try or except was executed
+finally clause is useful in case where both of your try and except might fail.
+
+
+num = [ 5, 4, 6, 8]
+
+
+try:
+    avg = sum(num)/len(nums)
+    print('av of the list', avg)
+
+except:
+    print('cannot compute avg - make sure you enter a list of integers')
+
+finally:
+    print('Feel free to rerun the code with another list of interger')
+
+
+
+Function Basics
+-----Creating a function
+                  def add_three(num1, num2, num3):
+                      sum_three = num1+num2+num3
+                      return sum_three
+Using function by calling the function name with parentheses.
+sum_output = add_three(2,4,5)
+
+
+
