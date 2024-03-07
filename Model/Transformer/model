@@ -84,3 +84,30 @@ LoRA: Low rank adaptation comes in handy for tuning huge language models, LLM ar
 PaLM:540B,GPT-3:175B: GPT-2:1.5B all are train first on parameter
 DALL-E3 has many improvement over DaLL-2 improve image genration
 DALL-E 3 short synthetic stable difiusion same by google dalle by openai
+LLM hallucination discover new math solution Google DeepMind also did it.LLM solve good Math.
+DPO Direct preference optimization: Language model is secretly a reward model: LLm produce pairs of output
+Reward model mimics human rating: LLm trains to receive high geedback from the reward model
+LLm train RLHF
+Transformer architecture:use behind chatgpt, vision transformers, Image generators, AlphaFold2 for predicting protein folding and many more.
+transformer use text: text input, image imput, word prediction/classification, transformer layer: 1 MLP sublayer,Attention, Attention vs self-attention
+   queries,keys,vaalues,multiplication opposite, Multi-head attention, Attention scales quadratically,position emveddings, Residual connections
+   and Normalization layers, Masked Language Modelling, RNNs diff.
+Sparse LLM at inference 6 time faster transformers DEJAVU :DeepNet scaling transformer to 1000 layers:optimal brain damage
+    Sparse neural networks, static sparsity hurts, contextual sparsity, DEJAVU method, speedups,MoE: Connection to Mixture of Experts
+    Theoretical insights: MLPs sparsity,Attention sparse, Attention mean shift clustering
+
+Mamba to replace transformers,State space Models(ssm) high level,SSM more detail, Discretization step in Ssm,SSM are fast,SSM training :Convolution trick
+      Selective SSMs, Mamba architecture, Building on mamba, RNN
+      MOE mixture of Experts Mamba: effieient selective state space model
+      Vision Mamba: Efficient vishual representation learning with Bidirectional State space Model
+      MambaByte: Token free Selective state space model
+      RWKV: Reinventing RNNs for transformer Era
+
+Genie(GoogleDeepMind):Generative Interactive Environments: 2D Game from prompts
+Genie architecture: Genie train over 200,000 hour gaming video from internet 
+      11 billion parameter
+Video Tokenizer: Auto encoder and decoder
+ST-Transformer, Latent Action model (LAM), Dynamics model(video tokenization from video),genie training(video tokenizer,latent dynamic)
+    inference
+
+Text to image model-DALLe 1 , dalle, dall22, dalle3 please kipe passense in tech
