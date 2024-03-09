@@ -30,5 +30,110 @@ Function Basics
 Using function by calling the function name with parentheses.
 sum_output = add_three(2,4,5)
 
+Parameters:Local variable within body of function
+
+def greetings(language):
+    if language == 'spanish'
+        greeting = 'Hola'
+    elif lanuage == 'English':
+        greeting = 'Hello'
+    elif language == 'French':
+        greeting = 'Bonjour'
+    print(greeting)
+
+Arguments: Passed into function used as parameters
+greeting('French')
+
+Recursion: Process repeatedly calling a function with itself
+
+def factorial(num):
+    if num ==1:
+        return 1
+    else:
+        return num*factorial(num-1)
+
+factorial(5)
+
+Why Recurse?
+produce clear code,reducing need repeat code
+use advanced data structure problems
+split complex task to smaller task
+
+Lambda function syntax: lanbda function defined with lambda keyword without a name
+
+lambda argument(s): expression
+
+add_two = lambda x: x+2
+add_two(5)
+
+Why use Lambda function
+for Quick function with oneline
+for combine built-in function map(), filter(), and apply()
+
+import pandas as pd 
+
+df = pd.DataFrame({'name': ['Amy', 'Jackie', 'Sue'],
+                    'grades': [90, 84, 76]})
+
+df['grades'] = df['grades'].apply(lambda x: x*1.2)
+
+print(df)
 
 
+
+
+Classes: Data type encapsulates information and function as blueprint for objects
+
+class Dog:
+    # blank class
+    pass
+
+Objects: object instance of class, means object contain everything from class. take class Dog and create object pepper
+
+class Dog:
+    # blank class
+    pass
+pepper = Dog()
+print(pepper)
+
+
+Constructors: special function executed when object is instantiated. __init__() function use for constructor
+Python built-in __init__() method as constructor.
+
+class ClassSchedule:
+    def __init__(self, course):
+        self.course = course
+
+Instance Variables: self parameter in __init__() method refers to current instance 
+instance variable course allow input assign a value
+Create a class instance by calling class and inputting value for course.
+Let create instance with instance variable 'chemistry' 
+assign it object named first:
+
+class ClassSchedule:
+    def __init__(self, course):
+        self.course = course
+first = ClassSchedule('chemistry')
+print(first.course)
+
+
+Destructors:Special function called when object get deleted.
+__del__() method is commonly use for destructor is called when object is deleted.
+Called every time object initiated from ClassScheddule class deleted.
+
+Class ClassSchedule:
+    def __init__(self, course):
+         self.course = course
+    def __del__(self):
+        print('You successfully deleted your schedule')
+
+
+self parameter in __del__() method refers current object.Triggering this method by deleting object will execute print()
+
+#Create ClassSchedule object
+sched = ClassSchedule('chemistry')
+# delet ClassSchedule object
+del sched
+
+
+Access Modification
