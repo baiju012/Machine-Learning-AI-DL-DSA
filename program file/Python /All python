@@ -137,3 +137,417 @@ del sched
 
 
 Access Modification
+
+Public Access Modifier: No need to specity access modifiers for public members
+
+class ClassSchedule:
+    def __init__(self, course, instructor):
+        self.course = course
+        self.instructor = instructor
+    def display_course(self):
+        print(f'course:{self.course}, Instructor:{self.instructor}')
+
+#All members here are accessible outside of the class.
+sched = ClassSchedule('chemistry','Mr.Doe')# initializing
+
+sched.display_course() # prints course chemistry, instructor
+sched.course #prints chemistry
+
+
+Protected Access Modifier: denote with prifix_, prevent members from being accessed outside of class, unless from a subclass.
+
+class ClassSchedule:
+    def __init__(self, course, instructor):
+        self._course = course                 # protected
+        self._instructor = instructor         # protected
+
+    def display_course(self):
+        print(f'Course: {self._course}, Instructor: {self._instructor}')
+sched = ClasssSchedule('Biology', 'Ms. smith')
+sched.display_course()
+
+
+Private Access Modifier: denote __, private any attempt to access these members outside of class will cause an attribute Error message.
+
+class ClassSchedule:
+    def __init__(self, course, instructor):
+        self.__course = course                   # private
+        self.__instructor = instructor           #private
+
+    def display_course(self):
+         #public
+         print(f'course : {self.__course}, Instructor: {self.__instructor}')
+
+sched = ClassSchedule('Biology', 'Ms. smi')
+sched.__course                       # this will throw attribute error blc we are trying to access private mem
+sched.display course()          # this won't throw attribute error blc this method is public
+
+
+ENCAPSULATION: oop, encapsulation fundamental concept describes wrapping variables and methods in one unit.
+
+A class contain variables that only accessed by object of class.
+below class UserInfo with constructor that takes variables username and email_address
+
+Class Variable
+
+class UserInfo:
+     def __init__(self, username, email_address):
+         self.username = username
+         self.email_address = email_address
+user = UserInfo('user123', 'abc@edf.ght')
+
+user.username
+user.email_address
+
+
+Class Methods: access object of class
+below ex class UserInfo with method check_username check whether username saved in object or not.
+
+class UserInfo:
+    def __init__(self, username, email_address):
+        self.username = username
+        self.email_address = email_address
+
+    def check_username(self, username_to_check):
+        if username_to_check == self.username:
+            return True
+        else:
+            return False
+# check_username our object run method
+
+user = UserInfo('user123', 'abc@ef.ghi')
+
+user.check_username('user123') # return True
+user.check_username('user345') # return False
+
+
+Inheritance:feature oop that enables transfer methods and properties one class to another.
+Inheritance allow reusability code extending capabillity new classes
+parent class
+child class
+
+Parnet Class: also base class, whose method and properties transfer over child class 
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name 
+        self.age = age
+
+     def print_info(self):
+        print(f'{self.name} is {self.age} year old')
+
+
+Child Class: also derived class, that inherits method and properties form the parent class.
+---Name patent class in definition of child class
+---Constructor parent class within constructor child class
+
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def print_info(self):
+        print(self.name)
+        print(self.age)
+
+class Teacher(Person):
+    def __init__(self, name, age, subject):
+        self.subject = subject
+
+
+         Person.__init__(self, name, age)
+
+
+
+
+Polymorphism: in oop, polymotphism concept class sharing methods with same name.
+useful when there are objects initiated from different class may share similar methods.
+
+
+Polymorphism with Class: class allow contain method that share same name another method from different class
+code below show two different class that are independent of each other some method of same names
+
+class Checking():
+    def type(self):
+        print(You have a checking account bank')
+
+    def balance(self):
+        print('$20 left you checking')
+class Savings():
+    def type(self):
+        print('You have saving account bank')
+    def balance(self):
+        print($1000 left in your saving')
+
+# we can create object for each class, wihtout worrying about object belong which class, call the same methods.
+
+account_a = Checking()
+account_b = Savings()
+
+for account in (account_a, account_b):
+    account.type()
+    account.balance()
+
+OUTput:
+You have a checking account at the Codecademy Bank. 
+$20 left in your checking.
+You have a savings account at the Codecademy Bank. 
+$1000 left in your checking.
+
+
+
+String Methods: string defined single quotes '' or double quotes "" and can contain combination of letter,number, symbols and spaces.
+
+String Indexing and Slicing
+
+intro = "My name jeff" # for accessing first character use index 0 [python is zero index language]
+# write name varible followed by brackets[]
+
+print(intro[0])
+
+intro[0:2] # for first 2 letters. first index(0) as well as end index(2), separated by :( remember end index is non inclusive in python)
+We also negative indices to print letters from back. 
+intro[-5:-1]
+
+Common Built In Function
+
+len()# len(intro)
+
+str.lower() # .lower() convert all letter in string lowercase.
+str.upper() # .upper() convert all letter in string uppercase.
+str.title() # .title() like hiding each word first letter should be capital.
+str.split() # .split() take string split into list of string. by default, function split whitespace but separator can specified as argument.
+
+intro = "My name is jeff"
+print(intro.split()) # print['My', 'name', 'is' , 'jeff']
+print(intro.split('name)) # print['My','is jeff']
+
+
+List : ordered collection item that can contain different data type such as string, integers, float values and many more.
+
+list created by bracket [] item separated by commas,as noted above, list can hold different data type,including sting,integers, float value more
+
+lst = ['abc' , 123, 'def', 10, 12, ['r','t','e']] # 6 items start with abc end ['r','t','e']
+
+List indexing and slicing
+lst = ['abc' , 123, 'def', 10, 12, ['r','t','e']]  # indices used access specific items list index 0 first item
+
+slicing using range of indices access multiple item.
+print(lst[4:6]) # print [12,['r','t','e']]
+
+Common Built-in Methods
+
+.append() # argument to add item to end list
+lst = ['abc', 123, 'def', 10, 12,['g','h','i']]
+lst.append(99) # appends 99 at end list
+.remove() # remove item passed as argument.
+lst = ['abc', 123, 'def', 10, 12, ['g','h','i']]
+lst.remove(12) # remove 12 from list
+.pop() # pop() takes index and rmove an item at given index return that item.
+lst = [ 'abc', 123, 'def' , 10, 12,['g', 'h','i']]
+lst.pop() # remove [ 'g', 'h' , 'i']
+lst.pot(0)
+
+
+Tuples: built in data structure python. Just like list, tuples can hold sequence of item 
+--Tuples are more memory efficient than lists
+--Tuples have a slightly higher time efficiency than lists
+
+tuple are immutable can't modify tuple after creating one 
+
+Tuples: define parentheses () with comma-separated values
+my_tuple = ('abc',123, 'def', 434)
+
+tuple capable to holding one item as long as item followed by comma
+
+my_tuple = ('abc',)
+
+
+Tuple Indexing and Slicing
+my_tuple = ('abc', 123, 'def', 456)
+# for fist item use index 0 ( python is zero-index language). writ name of tuple followed by brackets[] access item 
+print(my_tuple[0])# print abc
+
+also apply slicing using range of indices to access multiple item in list brackets contain first index as well as end item, separated by :
+
+print(my_tuple[3:5]) # print (
+
+Common Built in Functions
+
+len(my_tuple) # take tuple argument to count items in tuple.
+max()    # return maximum value note function require all values same data type: used numerical values give max: used string values give max index as sorted alphabetically.
+
+my_tuple = (67, 89,34)
+max(my_tuple) # returns 89
+my_tuple = ('orange', 'blue', 'red', 'green')
+max(my_tuple) # returns "red" r has highest index
+my_tuple = ('abc', 343, 45, 'def')
+max(my_tuple) # throws an error!
+
+min() similar to max()
+
+
+.index() # built-in method .index() take value as argument find index in tuple.
+
+my_tuple = ('abc' , 234, 564, 'def')
+my_tuple.index('abc')  # return 0
+my_tuple.index(234) # return 2
+
+
+.count() # take value argument to find number occurrences in tuple.
+
+my_tuple = ('abc','abc', 2, 3, 4)
+my_tuple.count('abc') # rturns 2 
+my_tuple.count(3) # returns 1
+
+
+
+Dictionaries: most frequently used built-in data structures in python.
+Dictionaries: defined with curly brackets {}. Dictionaries contain key-value pairs, refer pair of key and value separated by colon:
+Values can hold and mix of different data tyoe, including list or even nested dictionaries. key must be immutable data type  such as strings , numbers or tuples
+
+groceries = { 'fruits': ['mangoes','bananas','kiwis'],
+              'protein': ['beef','pork','salmon'],
+              'carbs':['rice','pasta','bread'],
+              'beggies':['lettuce', 'cabbage', 'onions']}
+
+Accessing and Writing Values
+
+party_planning = { 'yes': 10,
+                     'no' :15
+                      'location':'backyard'}
+party_planning['no'] # return 'our backyard'
+
+party_planning['no'] = 'yes'
+# A new key-value pair added to dictionary
+party_planning['Dress code'] = 'Casual'
+
+
+Common Built- in Functions
+len() # length of dictionary measured using built in function len().
+take dictionary argument to count number of key value pairs in dic
+
+len(party_planning) 
+
+.update()  # built-in method update() dictionary as argument to update existing dictionary.Any new key value pair will added to existion dictionary,
+
+shopping_list1 = {'jewelry': 'earrings','clothes':'jeans','budget':200}
+shopping_list2 = {'shoes':'sandasls', 'budget':350}
+shopping_list1.update(shopping_list2)
+print(shopping_list1)
+# prints {'jewelry':'earrings','clothes':'jeans',budget':350,'shoes':'dandals'}
+
+.keys() and .values() return list of keys and values of dictionary.
+
+shopping_list = {'jewelry':'earrings':'jeans','budget':200}
+shopping_list.keys() # return dict_keys(['jewelry'.'clothes','budget'])
+shopping_list.valures() # returns dict_values(['earrings','jeans',200])
+
+
+
+Sets: Set one built-in datastructes in python 
+
+Sets:immutable, unordered collection unique element that consist integers, floats,strings and tuples. sets cannot hold mutable elements such as list and dictionary
+set created with curly braces{} item inside braces separated by commmas 
+
+set1 = { 'jenny', 26, 'Parker', 10.5}
+print(set1) # print {10.
+
+
+set can used list argument create set from list. Note it will drop any duplicate element in list sets can
+only contain unique, non-duplicated elements. 
+1st = ['jenny',26, 'Parker', 'Parker', 10]
+set2 = set(1st)
+print(set2) # print { 10, 26, 'jenny', Parker'}
+
+
+Accessing and Writing Values
+Sets do not have index or keys. Use in to check see if element exist in set:
+students = {'jane','carlos','Amy','Bridgette','chau','Dmitry'}
+print('chau' in students) # returns True
+
+Common Built-in Mthods
+
+.add()
+
+sets are immutable, existing element within sets cannot changed. new elements added using
+built-in method add() take element add to set:
+
+students = {'jane','carlos','Amy','Bridgette','chau',Dmitry'}
+
+students.add('George')
+print('George' in students) # True
+
+.update() and .union()
+
+.update() any iterable object, such tuples, lists, dictionaries or sets, and adds the object to existing set any duplicate elements will not be added.
+
+students1 = {'jane', 'Carlos', 'Amy','Bridgette', 'chau', 'Dmitry'}
+students2 = {'Alice', 'Lily', 'Zhuo', 'Amy', 'jane'}
+
+students2.update(stuedents2)
+students3.union(students2)
+
+.remove(): built-in method take in element and removes from set 
+students = {'jane','Carlos','Amy','Bridgette','chau','Dmitry'}
+students.remove('Bridgette')
+
+
+for loops:Because sets are iterable, we can utilize a for loop to iterate  throght set 
+count_down = set([7,6,5,2])
+for num in count_down:
+    print(num, 'seconds left')
+
+
+Queues and Stacks: two type datastructures that hold collection of items.
+they both aren't built into python but can leverage python built-in data structues such as list, to create them 
+queue store items in fifo format . stack stores items in lifo format
+Queues
+follow fifo to store and remove data 
+
+implementation
+
+class Queue:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        self.size = 0
+    def enqueue(self,value):
+        if self.has_space():
+            item_to_add = Node(value)
+            print("Adding" + str(item_to_add.get_value()) + "to the queue"
+            if self.is_empty():
+                self.head = item_to_add
+                self.tail = item_to_add
+            else:
+                self.tail.set_next_node(item_to_add)
+                self.tail = item_to_add
+               self.size + = 1
+        else:
+             print("sorry, no room")
+
+    def dequeue(self):
+        if self.get_size()>0:
+            item_to_remove = self.head
+            print(str(item_to_remove.get_value()) + "is served")
+            if self.get.size() == 1:
+               self.head = None
+               self.tail = None
+            else: 
+                self.head = self.head.get_next_node()
+            self.size -= 1
+            return item_to_remove.get_value()
+       else:
+         print("queue is empty")
+       def peek(self):
+         if self.size>0:
+             return self.head.get_value()
+         else:
+              print("No orders waiting")
+        def get_size(self):
+             return self.size
+        def is_empty(self):
+             return self.size == 0
+
+
+enqueue()
