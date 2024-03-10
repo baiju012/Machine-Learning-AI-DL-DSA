@@ -601,3 +601,4 @@ push() : this method take value and add to top of stack print message all out of
 pop(): thiss method remove top value in stack if there existing
 peek(): this method returns top value in stack if there are existing no value stack totally empty
 is_empty(): this method check stack is empty return True and False if it is not.
+
