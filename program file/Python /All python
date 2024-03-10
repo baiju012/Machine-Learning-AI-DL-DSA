@@ -550,4 +550,54 @@ class Queue:
              return self.size == 0
 
 
-enqueue()
+enqueue(): this method take value adds to queue it there is space
+dequeue(): remove value from queue or totally empty
+peek(): returns front value in queue if no values
+get_size(): method return size of queue. is_empty()
+
+
+Stacks: follow LIFO protocol to store and remove data.
+
+Implementation: also implement stack datastructure using nodes. 
+also possible to create stack using just lists.
+
+
+from node import Node
+
+class Stack:
+    def _init_(self, limit=1000):
+        self.top_item = None
+        self.size = 0
+    def push(self,value):
+        if self.has_space():
+            item = Node(value)
+            item.set_next_node(self.top_item)
+            self.top_item = item
+            self.size += 1
+        else:
+             print("All out of space")
+
+    def pop(self):
+        if self.size > 0:
+            item_to_remove = self.top_item
+            self.top_item = item_to_remove.get_next_node()
+            self.size -= 1
+            return item_to_remove.get_value()
+        else:
+            print("this stack is totally empty")
+
+    def peek(self):
+        if self.size > 0 :
+            return self.top_item.get_value()
+        else:
+            print("NOthing to see")
+
+     def is_empty(self):
+         return self.size == 0
+
+
+
+push() : this method take value and add to top of stack print message all out of space
+pop(): thiss method remove top value in stack if there existing
+peek(): this method returns top value in stack if there are existing no value stack totally empty
+is_empty(): this method check stack is empty return True and False if it is not.
