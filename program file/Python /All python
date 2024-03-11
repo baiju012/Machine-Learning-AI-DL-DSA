@@ -602,3 +602,24 @@ pop(): thiss method remove top value in stack if there existing
 peek(): this method returns top value in stack if there are existing no value stack totally empty
 is_empty(): this method check stack is empty return True and False if it is not.
 
+
+Scikit-learn: Implement ml model and statistical modelling. for regression, classification, clustering and statistical tool for analyzing models
+SciPy : scientific computation library use Numpy underneath. scientific python provide more utility functions for optimzation,stats and signal processing open source
+TensorFlow : Create large scale neural network with many layers use deep learning or ml problems. classification, perception, understanding, discovering prediction.
+Pytorch : feature framework building deep learning model use for image recognition and language processing. easy to use.research and focused on research flexibility.
+Keras : high level deep learnig API (google) implement neural networks(python) also support multiple backend neural network computation.
+Seaborn : library making statstical graphics in python build top of matplotlib and integrates closely pandas data structues. seaborn help you explore and understand your data
+Scrapy : framwork for crawling web sites and extracting structured data. use for data mining, information processing or historical archival.
+OpenCv : great tool for image processing and performing computer vision tasks. used face detection,objection tracking, landmark detection more support python, java, c++
+Theano : acts as bridge to inject compiled C code into runtime(software responsible for program execution) calculation upto 140 times faster on GPU to C on CPU (support float32 format) pure python
+Requests :
+lightGBM : Create dicision trees that grow leaf wise, given cond only single leaf is split, depending on gain leaf-wise trees can sometimes overfit
+Plotly : use data visualization and support various graphs like charts, scatter plots, bar charts, histograms, area plots etc. embeded on website provide wide variety of complex plotting
+Pipenv: Generates and checks file hashes for locked dependencies(installing from pipfile) automatic finds your project home, recursively by looking pipfile.
+Pybrain : open source implement ml algorithms.solve problem quickly. easy to use library developer are working on this for improve flexible, faster usability
+Pycaret : automate ml workflows. endtoend ml model management tool speed up expriment more productive
+Pygame : writing video games include computer graphics and sound libraries 
+Ramp : rapid ml prototyping. simple declarative syntax for exploring features, algorithms and transformation quickly efficiently.
+Bokeh : high interactive graphs and visulizations. done by bokeh using html and js this make it powerful tool for creating projects, custom charts and webdesign based application
+Caffe2 : deep learning framework provides easy and straightforward way you experiment with deep learning and leverage community new model and algorithms. designed with production oriented application like mobile integration in mind
+ELI5 : give flexibilty to debug and visualize different ml model using single API provide built support for differet ml frameworks and present unified way
