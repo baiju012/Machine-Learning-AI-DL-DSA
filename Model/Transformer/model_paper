@@ -122,3 +122,15 @@ Text to image model-DALLe 1 , dalle, dall22, dalle3 please kipe passense in tech
 
 
 Paper:
+
+
+Translation By NLLB and simple googleAPI
+Google translate,Deepl, microsoft translator,Automated translation tools , batch processing,
+Automated translation tool : DeepL, microsoft translator, translating large volumes
+
+from ibm_watson import LanguageTranslatoV3
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+
+
+API : text to speech
+API : speech to text, NLP, assistent,Translation
