@@ -1,1 +1,63 @@
+linear regression : statistical algorithm that model relationship between dependent and independent variables. linear regression finds best-fitting linear equation predicts dependent or target variables
+Ordinary least squares most common method used in linear regression aim to minimize error blw observed data point and predicted values(Ridge regression-imporve performance of lr
+, Lasso regression->increase model interpretation, Elastic net combines ridge and lasso, Non negative least squares regression variant-> making ideal for Non negative values such as price or temp
 
+Logistic regression: Binary classification problems. refer class or category, relationship blw independent variables and probability of observation belonging to particular class.it applies a user defined threshold(hyperparameter)
+Logistic used for decision making data into two classes.such as whether to invest in certain stock,buy or sell a 
+business or make medical diagnosis.
+
+
+
+Decision trees :provides way make systematic decisions using flowchart like set binary decisions. It is hierarchical,branching tree like structure 
+if condition1 and condition2 ... and condition3 then outcome
+Decision trees used both classification and regression tasks. making decission at each node
+starting with labeled data and potential features for branching. divided into subsets hold specific feature sets. 
+ex-gini metric lower gini value higher quality.
+limitation DT : can overly complex, leading to overfitting. 
+overfitting can controlled through methods such as tree pruning, setting a minimum sample count for leaf nodes or limiting the tree's depth
+
+Support vecotor machines(SVMs): a supervised ml algo use classification and regression task.operates on principle of finding a hyperplane or line in two -dimension space that separates two classes of data points.
+discriminative classifier solve both classification and regression problems as supervised algorithm, svm requires labeled data, model train on subset data 
+SVM classifier are well known for their abiltiy to identify hand-written digits
+use for facial recoginition, image segmentation(differentiating organs or tssues in MRI) life expectancy, and expected return on investment(ROI) in financial industry
+Linear SVM: main objective to find line or plane that best separates classes in target variable from each other.
+Kernel SVM: Many real world problem cannot divided into classes by simple line.svm applied using "kernel trick" uses curved lines insted of strainght lines to separate the class.iris use linear kernel and linearsvm
+SVM can high accuracy, working well with high-dimensional data, low sensitivity outliers.
+
+K-nearest neighbors(KNN) : train data based on label target classes. algo can conceivably use lidar images distinguish 3D human and 2D pictures
+KNN- prevalent in many sectors, such as healthcare(for disease prediction), finance(credit scoring), and e-commerce(for rcommendation systems)
+KNN classification (predict categories): uses knn algotithm to categorize labeled data point by analyzing the categories labeled data point by analyzing categories of K nearest neighbors in feature space 
+KNN classification has seen widespred use in image recognition where image classified based on feature of similar images in dataset.
+voice recoginition system use knn to classify voice command by comparing them to known voice patterns
+KNN classify genes into dfferent functional cateories in bilogical sciences and genetics.
+
+KNN regression: class becomes very large(continous value)
+real estate: predict price of house based on feature(area, nu bedroom, location) knn reggression used averageing the prices of Kmost similar house
+stock market forcasting: historical stock price movements can inform future price predictions
+Weithted averaging: closer neighbors can give more weight in averaging process
+
+
+EValuation matrics for classification
+Accuracy: straightforward metric represent ratio of correctly predcted instances total instances in dataset. beneficail when class distribution is blanced 
+in case class is imbalance accuracy can misleading for instance, 95% samples belong to classA and 5% belong to classB model predicting everything as classA still accuracy 95%
+
+Precision and recall: metric measures accuracy of positive prediction wile recall measures the ration of positive instance 
+precision and recall especially important when false positive and false negatives carry different costs.for flase negative(disease present but not detected) more dangerous in medical test than false positive(disease absent but indicated as present)
+
+Confusion matrix : is table used to describe performance of classification model on set of data true values known four value TP,FP,TN,FN 
+true positives and true negatives indicate correct classifications, where false postivies and false negatives indicate errors, ture positive would disease present and detected while true negative would be disease absent and not detected as present
+
+
+Area Under the curve-receiver operating characteristic(AUC-ROC): curve plots true positive rate(recall) against false positive rate
+AUC represent area under ROC give scalar value, indicates model ability to distinguish between positive and negtive class
+AUC-ROC useful dealing with dataset with class imabalance. AUC value 0.5 suggests no discrimination(equivalent to random guessing) 
+value 1 indicates perfect discrimination. ex- credit card transaction most lgitimate very few fraudulent, which represents imabalance two transaction classes.
+
+
+Evaluation matrics for regression: examine relation blw two or more variable of interest.
+R-squared(R2): coeffieient determination, quantifies proportion of variance in dependent variable that predictable from independent variables 
+range(0-1) 1 INDICates regression predictions perfectly fit data R2 suggest better fit, doesn't always mean better model, especially if model is overfitting.
+Mean squared error(MSE): av squared differences blw observed and predicted values.MSE emphasize more significant errors over smaller ones
+since squares residuals.means sensitive to outliers lower mse generally consider better
+Mean absolute error(MAE): calcualte avg absolute difference blw observed and predicted values
+MAE treates all errors equally, so it is less sensitive to outliers compared to Mse similar to MSE a lower MAE indicates better model fit data
