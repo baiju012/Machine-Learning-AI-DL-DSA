@@ -61,3 +61,38 @@ Mean squared error(MSE): av squared differences blw observed and predicted value
 since squares residuals.means sensitive to outliers lower mse generally consider better
 Mean absolute error(MAE): calcualte avg absolute difference blw observed and predicted values
 MAE treates all errors equally, so it is less sensitive to outliers compared to Mse similar to MSE a lower MAE indicates better model fit data
+
+
+
+Natuaral Language Processing (NLP):bridge blw intricate nuances of human language and analytical prowess data science.
+NLP use AI focuses on teaching computers to understand,intrpret, and interact with human language way that both meaningful and useful. 
+Computer science: programmer design and develop NLP algotithms to efficeintly process and analyze vast volumes of text data.these algo enable machine to perform text classification, sentimetn analysis and Language translation task
+Liguistics: linguistics, study of languages, brings valuable insights to NLP , programmers developers use these insights to help NLP system understand and work with text and speech data
+Machine learning: programmer use ml to train deep learning models to learn and adapt language patterns.NLP-driven model have signigicantly advanced text understanding and response
+Data science: collecting, analyzing preprocessing, and structuring vast amount ot textual dat for analysis. NLP leverages data science technique to train model derive insights from textdat
+
+Practical application and task NLP
+Text understanding: NLP systems use text understanding analyze and intrpret meaning of textual data.
+Language translation: NLP use convert text or speech from one language to another. NLP powwered translation system apply advanced techniques to ensure accuracy and fluency translated content, helping people from different linguistic backgrounds communicate.
+Sentiment analysis: application of NLP help business analyze customer sentiment and opinion expressed text data such as social media post, review or comments.allow businesses to understand whether customer express positive negative aor neutral sentiment
+Speech recognition: NLP converts spoken language into text, process widely used voice assistants and transcription services. NLP also improves accessibility individuals with disabliltes
+
+
+two spect NLP 
+Natural language understanding(NLU):enable computer to understand interpret human language.It involves task as text comprehension, language modeling,sentiment analysis and recoginition. NLU allow NLP systems to grasp meaning, context  and behind text or speech
+Natural language generation(NLG): focuses on generation of human like text or speech by computers. NLG systems transform structuted data into coherent and contextually relevant languages.
+this use various application including text summarization, language translation, chatbots, voice assistants, and personalized email to enable machine to speak to humans and natuarally and understandably
+
+Common programs using NLP
+Microsoft word: nlp feature like spell check, grammar check, and autocorrection. It also offers suggestion for improved sentence structure and readabilty
+Google search: engine use NLP algorithm to understand user queries and provide relevant search results. Feature like google autocomplete and featured snippets also use nLP
+social media platforms: like facebook and linkedin use NLP for content recommendation, sentiment analysis and trending topic identification.
+voice assistants:like apple siri,amazon's alexa, google assistant rely on NLP understand and respond to spoken language commmand and questions.
+Customer support chatbots: service use chatbot nLP capabilities provide instant customer support, answer frequently asked questions and assist users with inquiries.
+Content recommendation systems: Streaming platforms like Netflix and music service like spotify use NLP for content recommendation, suggesting movies, shows, or music base on preferences
+Healthcare information systems: NLP usd heathcare information system process medical records extract patient information and assist in clinical decision
+Virtual learning environments: automated grading ,personalized course recomendation nlp.
+
+Ambiguity: ambiguous, word and phrases have multiple meaning and association depending on contect how the word is used. NLP models use contextual information and surrounding words to disambguate.
+Lack of context: struggle with maintaining context in long conversation or understanding subtle nuancess. Models with memory mechanisms, like transformers, help capture context over longer text
+Bias and fairness: model 
