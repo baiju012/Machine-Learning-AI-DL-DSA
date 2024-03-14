@@ -95,4 +95,25 @@ Virtual learning environments: automated grading ,personalized course recomendat
 
 Ambiguity: ambiguous, word and phrases have multiple meaning and association depending on contect how the word is used. NLP models use contextual information and surrounding words to disambguate.
 Lack of context: struggle with maintaining context in long conversation or understanding subtle nuancess. Models with memory mechanisms, like transformers, help capture context over longer text
-Bias and fairness: model 
+Bias and fairness: model inherit biases from training data, leading to biased or unfair outcomes.Addressing bias requries diverse and representative training data,ongoing monitoring, fairness-aware model design mitigate and correct biases.
+
+
+Tool and techniques include NLP
+Tokenization: Breaks text into individual words or tokens,forming basis for most NLP tasks.
+Stemming and lemmatization: words to root forms,aiding text analysis and rducing vocabulary variations.
+Part of speech tagging(POS): grammatical labels to words,helping syntax analysis and understanding sentence structure
+Named entity recognition(NER): categorize named entities,such as names people,place and businesses in text.
+Sentiment analysis: tool assesses emotional tone expressed text and often used for sentiment classification,such as positive,negative or neutral.
+Text classification:text into predefined classses or labels,such as spam detection or topic classification
+Machine translation:like google translate,NLP techniques translate text blw languages.
+Pre-trained language model:Large scale such as google BERT and openAI chatGPT, revolutionized NLP providing deep contectual understanding and generating human like text.
+
+
+NLP libraries and framework
+NLTK : comprehensice python library for NLP, contain many tool and resources task like tokenization,stemming,lemmatization,pos tagging.
+spaCy: fast and efficient python library for NLP. provids pre-trained models and supporttask like tokenization,pos tagging, and NER.spaCy known for speed and production-readiness.
+Transformers from Hugging Face:Provides state-of-the-art  pre-trained language models shuch as google BERT.It's widely used various NLP task text classification,language generation , translation
+Standford NLP:tool and model including tokenization,pos tagging and NER.It known for its high quality models and accuracy ofeten used for academic and research purposes.
+AllenNLP: deep learing framework specifically designed for NLP research. provides pre-built components for building and evaluting NLP models
+
+Text acquisition->Text preprocessing_>sentence structure and interpretation_>Numerical representaion->Machine training and accuracy checks->Application development
