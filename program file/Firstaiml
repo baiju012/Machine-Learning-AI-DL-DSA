@@ -117,3 +117,110 @@ Standford NLP:tool and model including tokenization,pos tagging and NER.It known
 AllenNLP: deep learing framework specifically designed for NLP research. provides pre-built components for building and evaluting NLP models
 
 Text acquisition->Text preprocessing_>sentence structure and interpretation_>Numerical representaion->Machine training and accuracy checks->Application development
+
+
+Tokenization,stemming,lemmatization,pos tagging,NER, sentiment analysis,text classification,machine translation 
+NLTK,spaCy,transformers from Hugging Face,Standford NLP ALLenNLP
+
+
+UNSUPERVISED MACHINE LEARNING:
+unsupervised ml similar to learing without a teacher, computer learn exploring data and finding structre and patterns on its own ex spot patteren in customer data
+Unlabeled data:don't have known or specified outcome.
+usupervised learning: unlabel data uncover hidden patterns or structures in data, unlabeled data makes it valuable in real world scenariosex-text,image,transaction record
+it delineate inherent structures,regularities, or recurring thimes within data. these underlying patterns offer valuagle insight knowledge,data compression,subsequent supervised tasks.
+
+Clusters: group similar each other according defined similarity measure ex-
+Association learing focus on uncovering patterns or relationships blw seemingly unrelated item occurrences.
+Reduced dimensionality:smaller features often extracted from dataset preserves essential information content data reduce number dimension and amount of data
+
+Clustering: such K-means, hierarchical clustering, DBSCAN aim to divide data into distincet groups based similarity.
+Dimensionality reduction: as PCA, t-SNE , autoencoders can undcover lower dimensional structures within high dimensional data salient features or patterns.
+Association learning: as Apriori or FP-growth used discover items often associated with each other dataset
+Anomaly detection: recoginizing normal patterns in data,unsupervised method spot outliers or anomalies deviate from patterns
+
+Advantange unsupervised learning:
+Cost effective and scalable: large amount of unlabeled data than labeled data.leverage large data sets extract patterns and insights
+Revealing unknown patterns:not being constrained by predefined labels,unsupervise learning unexpected or novel patterns that might not be apparent or considerad
+Data preprocessing: recognizing and extracting patterns help cleaning data,imputing missing values,or transformin features 
+Avoid bias: no labels guide learning process, less risk of bias form labeling process however,biases data collection or representatin can still impact unsupervise models
+
+two individuals with close ages and income would be considered similar likely grouped into same cluster comparing driving distance ciy manhattan distance metric
+usupervised learnig provide quantitative measure to compare data point, enabling algorithm to discover patterns group or reduce dimension dataset gidance of explicit labels
+
+Handling-dimensional data features researchers enconter curse dimensionality.
+Curse dimensionality: arise working with high-dimensional data. as number of dimensions(or features) dataset increases, volume of data required perform ml task increase exponentially.
+
+Dimensionality reduction: techniques such as principal component analysis(PCA),t-SNE and autoencoders help reduce number of dimensions while preserving much of data structure as possible
+Feature selection:instead using all available features, algorithms or domain expertise employed to select subset most informative and non-redundant feture
+Sampling: curse due to overwhelmingly large number of samples across dimensions, techniques such as random sampling or more sophisticated sampling method help reduce computational
+Regularization: Techiniques applied penalize complexity of model, making less likely to overfit high dimensional noise.
+Using specialized algorithms: algo are designed be adapted work better with high-dimensional data, such random forests or certain kernel methods clustering.
+
+method -clustering method operate different way might partition data into subsets, establish hierarchical trees, or determine clusters based on density.
+Dimensionality reduction projection onto lower dimensional space while preserving data.
+
+Scikit-learn :
+python library for ml and data analysis. Born from scientific computing ecosystem around pyhton.
+It offer array of tools that make process of modeling data simple and efficient. known for user friendly interface, scikit-learn encompasses comprehensive set of algorithms for various task
+including dimensionality reduciton
+open-source and community-driven; scikit-learn is open source licensed under BSD, developement benifited from the contribution numerous indibidual
+Built on NumPy,SciPY and Matplotlib: At core scikt-learn heavily relies on NumPy numerical operation, SciPy certain mathematical functionalities, oftern pair with Matplotlib for visualization
+Consistent API:Scikit-learn defining feature consisten API. Regardless type algotithm be classification, regression, clustering model instantiation, training, prediction 
+Wide array algorithms: from classic statistical model to more modern ml algo, scikit-learn boasts comprehensive toolkit. 
+unsupervised include clustering (KMeans,Hierarchical clustering),dimensionality reduction(PCA,t-SNE), even manifold
+Extensibility: Scikt-learn has vast suite method also designed allow users to seamlessly develop and integrate their custom algorithms
+Preprocessin and utilities: Scikit-learn provides range utilities for data preprocessing,including tool feature scaling,encoding categorical variables, imputation
+Model evaluation and hperparameter tuning: Scikti-learn tool excel for model evaluation and hyperparameter tuning. include cross-validation, grid search, various metrics evaluate model per
+Pipline integration:power full features ability create pipeline. ability streamlines many steps model building process, ensuring transformations and estimator executed in correct sequence
+Sparse data support: scenarios where data is primarily zeros(like text data represented bag of words format), Scikit-learn can efficiently handle sparse matrices, making more memory efficient.'
+Interoperablility: Scikit-learn not handle deep learning tasks, plays well with other libraries. Libraries such as Keras, example integrated with scikit-learn for more complex tasks.
+
+
+Clustering: data mining technique for grouping unlabeled data based on similarities or difference
+
+K-means clustering:popular unsupervised clustering technique in K-mean clustering,'K' number of user desired clusters for algorithm form from dataset. centroid point represents center each cluster reference point determining distance blw
+data pont cluster center first centroid slected randomly fromdata 
+
+Unsupervised KNN: it supervised learning algorithm, can use it unsupervised learning. Unsupervised KNN algo groups togethere data point based on similarity their KNN feature space. idea is if most of your immediate neithbors belong paritcular cluster
+DBScan: density-based spatial clustering application with noise. DBScan group point closely packed together based on distance measure and minimum number of point. useful finding clusters of arbitrary shapes instead of Kneasn, which tends to find spherical clusters.
+Point in low density regions,neighboring point are too sparse,typically considerd noise or border points
+
+Hierarchical clustering: create tree of clusters. It can either agglomerative(bottom-up approach) or divisive(top-down approach)
+in agglomerative hierarchical clustering, each data point starts as its own cluster,and pairs of clusters merge as one moves up hierarchy.
+Divisive clustering starts with one cluster,performing split recursively as one moves down the hierarch result dendrogram- tree like diagram
+
+HDBScan: hierarchical density-based spatial clustering of application with noise. extension of DBScan stand out by ability find clusters of varying densities. 
+insted using single value density(DBScan),HDBScan constructs hierarchy or clusters dynamically determines best density value cluster formation, making more flexible capable of detecting nested or compounded clusters.
+
+
+Dimensionality reduction:tackle challenge transforming original high-dimensional data into lower dimensional space,intending keep much data possible unchanged.
+Ex 2D,3D,1D
+2D reduction mthods (linear projection, Manifold projection)
+
+linear projection: subset of dimensionality reduction techniques transform data onto lower dimensional subspace using lingear combinations original feature.
+
+Principal component analysis: PCA use dimensionality reduction,identifies axes(principle components) in data maximize variance.
+by projecting data onto axes,PCA retains data's most significant structures and pattern while reducing dimensions.resulting principal components are othogonal each other ensuring capture non redundant information
+
+Independent component analysis(ICA): PCA look for uncorrelated axes independent component analysis(ICA) aims to find statistically independent axes.particularly useful when goal separate multivariate signal additive,independent components, makine popular 
+in audio and image processing fiels.ICA often used task such as blind source separation,objective extract individual signals from mix, separating multiple voice speaking simultaneously
+
+Singular value decomposition(SVD): factorization method decomposes matix into three other matrices, capturing essence original data.
+in context of dimensionality reduction, SVD trrasnform data into space defined by singular values, which are indicative data inherent structures.
+SVD underlying technique behind many other mthods, including PCA and applied areas such as recommendation system in NLP
+
+
+Manifold projection: finding linear combination of features reduce dimensions, minifold projection method design capture nonlinear structure inherent data. 
+They attempt to map high dimensional data to lower dimensional space, maintainging realtive distances blw points,especially close together. idea is preserve geometric and topological properities data manifold offering more intricate sometimes more accurate representation of original data.
+
+
+T-SNNE(t-distributed stochastic neighbor embedding): popular manifold learnig algorithm that visulize high dimensional data in two or three dimensions. By convering Euclidean distances blw data point conditonal probabilities,t-sne captures both 
+local and global structures. it t-distiributed probability measure ensures similar data point modeled by nearby point low dimensional space, making especially 
+effective for clustering visualizaiton. can comptationaly intensive and might not always yield consisten results across different runs.
+
+
+UMAP(uniform mainifold approcimation and projction):
+gian popularity for its efficeinecy and versatility.like t-SNE, UMAP focus preserving local structure,
+leading consistent interpretable embeddings.foundation toplogical data analysis give robust mathematical grounding, outperforms other techniques in terms of runtime, especially on large data
+
+Combined dimensinlity reduction and clustering:
