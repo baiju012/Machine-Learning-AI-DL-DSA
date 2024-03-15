@@ -344,3 +344,119 @@ Enery demand: forecasting electrical load and enery demand. Utility companies ma
 
 
 Neural Networks:
+Rosenblatt invented perceptron,inspired by neuron in brain,task input weight sum input features. output binary result based on magnitude of input.said activated switched on if input sum breaks threshold.
+
+Activation function: whether neuron should activate based on input receives.
+Bais: value added activation function response.
+
+Neurons: processing unit in neural network,nodem, perform calculation,produce output
+Layers: consist neurons,layers are stacked together from neural,each layer receives input from previous layer,applies math operation,pass result next layer
+Weights and Biases: value assign each neuron within layer,determine importance of output,weight are adjusted during training process improve network performance
+Activation function:non-linearity in network, allowing to capture complex patterns,they transformations or mathematical operation,applied to input neuron.
+
+Feedforward and Backprogation:
+Feedforward:process moving data through network from input layer to output layer.
+advanced feedforward model called recurrent neural networks(RNNs)
+
+Backpropagation: algo based on differential calculus that used to adjust neural networks weight biases improve performance.rate of change,error with respect to each weight assign to network
+update each by scaling factor model parameter known network learning rate
+lr dictates how large step take direction of gradient,smaller step batter chance finding optimal solution
+BP start by measuring error(diff blw network output and true label)
+
+**************
+Activity:question:qize
+role of layer
+Neural network:qize: activity
+
+
+
+************
+Generative AI:model learn from input data use what it learn to generate new data that mimics data learned from
+model learn patterns and structures from existing data.
+ex-image generation,text generation and data synthesis.
+GenAI content generation,data augmentation, data synthesis task, benefiting art, media, ml fields.(1950-60 rim;e base gemAI began,1990 neural network promise generating sequences of patterns,2000 revival deep learning,leading intro generative adverdarial networks 2014 advancing genAI,2010 witnessed emergence of LLM
+
+Application GENai
+Text generating: textual data,as sentence paragraphs, documensts,text data generation,human like text,artical,answer questions,engage in NL prominent ex-GPT3 and BERT.
+Image processing:Deal with visual data,as photographs drawings,diagrams,generate image,perform image-to-image translation,turning sketches into realistc images, assist object recognition and image captioning tasks ex-DALL-E and BigGAN.
+Coding:GenAi focus on generating,editing,and optimizing code, enhance code quality,improve software development process
+Audio processing:train audio data generate,manipulate,process sound.voice synthesis,text-to-speech,music generation,speech recognition,noise reduction,audio modality ex-WaveGAN and Tacotron.
+Molecular designing:working chemical structures and molecular data,practical application in drug ,material science,chemistry-related research.Reduce need for extensive laboratory 
+Video processing:video genaI focus video sequences,task like video gen, style transger in video , action recognition.essential computer vision video processing.
+
+Attention mechanism:enable neural network to pay attention word token within a learned context. allow models focus on specific part of input data,emphasizing relevant information while ignoring less important details.
+Transformers: neural networks that learn context and understanding from sequences from words.
+Transformer have NLP ,powering machine translation,text summarization,sentiment analysis,chatbots.Noteble model GPT3 and BERT built on transformer architecure
+further transformer expanded into computer vision,making strides image classification,object detection and image generation.
+
+Transfer learning with pre-trained transformer model become cornerstone of AI development.Initially trained on vast dataset, these models are fine-tuned for specific tasks.proficiency 
+oin languare understanding,including context,idiomatic expressions,nuanced languge usage
+
+GenAI and Large Language models:
+development of transfomers came ability to train neural nets on large datasets.Most notably LLm are trained on large dataset,including entire wikipedia corpus.LLM have also train massive data set obtained by web crawlers.
+Content on web can be inaccurate,unreliable,and biased.this present big challenge to these model capablity to validate artificailly generated output 
+
+step 1 pretraining on data: Genai LLM pre-trained on extensive datasets containing range of text form internet.During this phase model learn grammar,syntax,semantics,facts,even some level of reasoning by predicting next word in sentence or filling gaps in text
+step 2 Fine-tuning fro specific tasks:pre-training LLMs are fine-tuned on specific tasks or domains.ex- fine tuned task like language translation,text summarization question answering and content generation.
+step 3 contextual understanding:LLM analyze context of given text prompt and generate content that fits within context.enables them to generate coherent contextually relevant response
+step 4 Content generation:LLm generate content,including articles,poetry,stories,code.they emulate different writing styles,adapt different tones,produce content in multiple languages.
+Step 5 Application: LLM have practical applicaton in content creation,chatbots,virtual assistants,automaic text generatio,creative writing assistance.Task as text completion,comtent summarization,content translation.
+
+
+Career management LLM
+Does intersection of linguistics and artificial intelligence fascinate you? LLM model engineer career be pergect path for you.
+Hands-on experience:project,internship ml and NLP
+Certificate like Tensorflow and ai certificate
+Read research papers attend conference,participate online forums stay upto date latest advancements.
+Engage with AI community through networking,online platform,collaborative projcts,stay informed industry trends
+
+
+Alignment with current skill and interests: Have you identified how your current skill and interest align with requiremenst of being llm engineer.(excite me natural language processing)
+Understanding of challenges:Have you realistically assessed potential challenges and thought about how you might overcome them?(mastering complex, staying updated rapidly)
+Awareness of industry developments: Does your research into recent advancements reflect understanding current and future trends in AI and large language model(Have you identified why these development are significant to field and your career aspirations)
+Engagement with learning opportunities: Are event workshop you have identified relevant and beneficial for your career path(How you plan leverage these opportunities for networking,learning,and professional growth.
+Long-term career planning:Does your reflection show awareness of long-term commitments and continuous learning required in this field?(Have you considered how you will adapt as AI and languge modeling)
+
+Key concepts
+lesson 1 Deep learning:
+AI simulates human intelligence machine perform task that typically require human intelligence
+ML subse AI learn from data without explict programming.
+Deep learning(DL) subset ML use neural network architecture to learn from data indepth
+AI application range from simple tasks like filtering emails to complex ones like autonomous driving
+Ethical consideration AI involve ensuring fairness,transparency,accountability,and privacy
+
+Neural networks
+Neural networks computational model inspired by human brain,used extensively AI pattern recognition decision making
+consist of input hidden and output layers with hidden layers tranforming signal from input to somethng output layer uses
+perceptron is early neural network model that outputs binary result based on input features and threshold
+Modern neural networks use multiple layers and complex architectures,like cnn to process data.
+Weight and biases are critical in neural networks,determining importance input adn adjusting neuron activation.
+Activation function neuron introduce non-linerity, allowing network capture complex patterns.
+Backpropagation method used for adjusting networkd weight and biases improve performance by learning form errors.
+Neural networks learn form label data in supervised learning scenarios perform tasks like image and speech recognition.
+
+
+Generatine AI
+Gen AI refer system that generate new content mimicking human creativity.
+GenAI model learn form large datasets to produce new data instances like images,text,audio,more
+Development GenAI ranges from early rule-based system to advanced neural networkd and LLM
+GenAI application span text generation, image processing,coding,audio processing,molecular design,video processing
+GenAI model like GAN and teansformers rvolutionized creative and analytical tasks
+attention machanism tranformer allow genAI focus on relevant parts of data, improving relevance and coherence of generated content.
+GenAI made signigicant strides in NLP influencing various application beyond text generation
+LLM likegpt3 have trained massive data allowing generate human like text various task and industries.
+LLM in GenAI undergo pre-training on large data and fine-tuning for specific tasks,contributing to their versatility.
+Ethical consideration vital in GenAI developemt to address biases and ensure the responsible use gen tech
+
+
+Critical thinking:
+Identify ethical consideration in AI to address biases and ensure the responsible use of generative tech
+Explain how neural network used for pattern recogniton and decision making
+Describe how LLM generate human-like text acros various task and industries
+Summarize how GenAI model learn form lareg data produce new data instances
+
+Written communication
+Identify step align your current skill and interest and explain why
+Enage with AI community throuvh networking events,online platforms and collaborative projects
+Describe potential career challenge and strategies overcome them
+Explore upcoming AI or ML event workshop online
