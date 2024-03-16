@@ -520,4 +520,134 @@ AI buses
 Attention analytic thinking
 
 
-AI 
+AI smart cities and smart homes
+smart cities: leverage tech enhance infranstructure,services and overall quality of life
+integrate data from various sources improve efficiency,sustainabilty, and citizen engagement.
+Components include transportation,efficient energy management,advanced healthcare system enhanced public services.
+
+Smart homes: residence equipped with devices and system can controlled remotely automated increased comfort and convenience.
+feature interconnected appliances,lighting,heating,security ,entertainment,optimize energy consuption
+iOt play significant role enabling device communicate coordinate actions.
+
+IOT system everyday objects have sensors and connected internet allowing share data.
+
+Device with sensors:
+Connectivity:
+Data processing:
+Action:
+User interface:
+Cloud and data storage:
+Security and privacy:
+
+Big data analytics:process of examing vast and varied dataset to uncover information such pattern correlation,trends,insights.
+
+Enhanced efficiency: smart cities effiectively allocate resources like energy,water,transport,minimizing waste upping efficiency.reduce congestion,saving time and lowering emission. smart homes manage energy.
+Improved quality of life: smart home offer convenience,from precooled room hot days personalized entertainment systme
+Advanced sustainable practices:smart cities and homes champion green practices. cities adopt efficient transport system waste solution,reducing carbon footprint,enery saving appliance green energy decreasing env impact of urban living.
+
+Data privacy and security:
+Infranstructure costs:
+Technological inclusion:
+
+Case study:Liam
+
+
+Generative AI learn from data generate new content ideas,solution were never explicitly programmed into.
+
+Language:GenAI differ form AI that doesn't just follow set rules or patterns.instead,learn create text,image,music,more show human like creativity. make work easier boost creativity many job.
+this save time and make thier work better.GEnai understand context, answer in way that makes sense,creative like human,leading many new helpful uses.
+Vision: Genai vision focuses on producing realistic visual content reflects real world.algo use tech learn form existing visual data,enabling them create fresh and unique imagery.
+ex-crafting physical prototypes fashion designers can now use generative AI quickly generate a plethora virtual models,experimenting various colors,patterns,styles significantly less time
+
+Recommendation system and virtual shopping assistants:
+Digital personal shoppers, recommendation systems,use generative ai filter suggestion and advanced algorithm to analyze user perference deliver personalized product or content suggenstion
+enhancing online shopping experience and boosting engageement,sales,customer loyalty.
+
+GEnAI reshapes industries,enhance creativity and improve uer experience by generating new unique content.leran from dat,mimics humancreativity,excels various applications,customer service and design healthcare.
+Genai seamlessly integrates into worlplace and daily life,revolutionizing content creation,visual design,online shopping, ge
+GEnai language,vision,e-commerce virtual assistants.
+
+Field:marketing,journalism,architecture,healthcare,fashion design.
+Challenge and needs:what aspects work time consuming,require extensive creativity,could enhanced with personalized automated solution. 
+ex-content marketing,creating diverse and engaging content consistently challenging and time consuming.
+GenAI application:how genai could specifically address challenges and needs.identify particular functionalites of genAI 
+ex-genai can assist content maketer by generating variety of content ideas,creating drafts,even generating entire article
+
+challenge and consideration of genai language.
+Content accuracy and quality control
+Addressing bias in Ai generated content.
+Mitigating disinformation risks
+
+General adversarial network: pair of neural networks,generator and dicriminator,which trained simultaneously through adversarial training.
+
+GAN
+style transfer:
+Medical image analysis:
+Drug discovery:
+video game graphics:
+Special effects in movies:
+Fraud detection:
+Simulating data experiments:
+Art generation:
+Music composition:
+Customer experience:
+
+Variational autoencoders(VAE):neural network focus on representing inptut data concise and informative codes in latent space and reconstructing data bake from these codes.
+principles probability and statistical ingerence,using encoder trarnform 
+
+VAE:
+Image genearation:
+Image denoising:
+Style transfer:
+Anomaly detection:
+Data compression:
+Recommender systems:
+Drug discovery
+Financial modeling:
+Financal recognition
+content generation
+
+Conditional generation:process generating data that not only realistic but also adheres particular attribute or condition set by user
+personalized content creation
+product design
+Advertising
+Video game development
+Fashion industry
+Film production
+User interface design
+Architecture
+Training simulation
+Healthcare:
+
+
+Challenge GenAI
+Deep fakes and authenticity challenges:
+Navigating ethical dilemmas in visual AI:
+Legal implications and regulatory responses:
+Promoting media literacy and public awareness:
+
+
+Recommendation sysetems
+Virtual shopping assistant:use NLP,visual search,augmented reality,personalization guide.
+Ex-understand user request in natural language,find products using image search ,users visulize product,space with AR.
+
+Recommendation system versus virtual shopping assistant.
+
+
+Case study: shopSmart Inc.
+
+Integration AI across various fields:marketing,journalism,architecutre,healthcare,fashion design.
+job:whether usderstanding ai and functionalities
+
+Explore AI application develop better undrstanding of different fields that AI use 
+how they work together, you will explore city map using areas to explore how ai can user in each location
+
+HOMe:AI enhance security,convenience,enery efficiency.smart thermostats like nest use AI learn homeowners preference over time,adjusting temp automatic
+smart device play music,provide information and assist with tasks analyse video footage realtime detect unusual activity promptly alert homeowners
+Traffic camera:
+Vehicle:
+Home office:
+office building1:
+office building 2
+
+
