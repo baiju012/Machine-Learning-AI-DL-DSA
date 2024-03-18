@@ -688,3 +688,49 @@ Maintenance schedules:employ regular and thorough maintenance aircraft minimize 
 Overbooking strategies:empty seats caused last-minute cancellation airline use overbooking strategies
 Customer service policies:flexible rebooking compensation policies affected passengers manintain customer satisfaction loyalty.
 Risk monitoring and review:continuously monitor effectiveness,strategies and adjust based on ongoing  data analysis changing condition.
+
+
+
+ChatFPT,Bard,ai assistants,co-pilots,human augmentation(cretiv ewiriting,productivity,video scripts,data analysis,cading summery generation,marketing research, knowlede discorery with Rag,customer services,research assistant
+stable diffusion,Dall-E(generative art work,Rich images form text gaeming and video
+Creative expression(GentAI)
+
+Intelligence ability ro acquire and apply knowledge in useful ways.
+working:ability fo cs to acquire and apply knowlede useful ways
+learn,axquire and generalize
+
+learn fuctions-essential task of ai learn fun and aply them useful way
+fun -take input give output
+simple function: image classification:classification,semantic segmentation,leran form image to categories
+Object dection-fr function from image to set of boxees and categories
+Face recognition-function form face images to semantic embeddings
+Chatfpt- function from text tp mext wprd
+Semantic segmentation-function from imgae pixels
+
+function-represen tfun as nerral nets:neural nets universal function
+learning task if planet position y known at time x 0,1,2,3 and 4 day 
+learning process-shown manually,-increase w,if loss goes down -ve gradient,keep new w,if loss goes up + gradient ,roll back increaseand then decrease w by small amount,above
+if gradient + you tdecrease param.this gradient descent,
+learnin grate control how much you change param
+
+Training neural nets(learn function-big picture
+via gradient descent,Randomly initialize parameters/weithts,feed data forward,ocompute loss,foorward pass compute output,compute loss,Determine how strongly weitht contribute loss i.e gradient,backward pass;backprop compute gradient,update weights based how strongly contribute loss ie gradient,in manner reduce loss,use leaning rate for small step right direction,
+
+val model = new Model 
+model.train(xdata,ydata)
+val ypreds = model.predict(
+
+Aside: Array and Tensor(NDA arrays)
+array for sequntial data,neural nets, use NDAarrays,benefits,eff9ece9jt memory layou,aribitrary number dimesn,support vectrized,more numericlal ops,work on gpu: Rank0 scaler,Rank 1 vecotor,Rank 2 matrix:rank tells number of axes,each axess have any number of dimension:axiss dimension(rank)vs feature dimn:shape of tensor given you ingo shape 3,4,4:total(feature)dimensionality of tenor
+
+Aside-NDArrays:Rank 1 alway sbatch of N to fully utilize hardware.RRank2 tabular ot tim eseries data,shape(N,F),Rank3-grayscale image,shape(N,H<w)rank4-gb image,shape(N,C,H,W) Rank5 volumetric medical data shape(N<CmD,H,W)
+
+Model Training:create shape, weight and biasss
+modelfunctiox.matMul(w).add(b)
+epoch< 1 to 1000,gc,ypred,loss,backward(loss)
+params.foreach 
+
+Model prediction: predict(xva: Array y.toFloatArray,nm.create(xvalue).reshape
+
+Learning Arbitrary func:N neuraon layer can learn poly with m bend or n+1:anycurve appprozimately with polyline n bends(sufficient large n)
+much more efficient have multiple layers neurons.L layers with n neurons each learn lines with (n pow L) bends.where deep learning
