@@ -626,7 +626,6 @@ Navigating ethical dilemmas in visual AI:
 Legal implications and regulatory responses:
 Promoting media literacy and public awareness:
 
-
 Recommendation sysetems
 Virtual shopping assistant:use NLP,visual search,augmented reality,personalization guide.
 Ex-understand user request in natural language,find products using image search ,users visulize product,space with AR.
@@ -671,8 +670,7 @@ Transactional information:tracks customer purchases history interaction,allo
 
 
 Impact of AI on informed Decision Making:
-
-Impact of AI on risk management and Human Resources
+Impact of AI on risk management and Human Resources:
 
 Risk management:process identifying assessing,controlling threats organization capital and earning.These risk can stem from variety of sources,inncluding financial undertainties,legal liabilities,strategic management errors,accidents and natural disasters.
 step 1 Identifying risks:risk management involves recognizing potential risks could negatively affect organization.like physical risk natural disaster damaging),abstract risk fluctuation impacting financial positions.
@@ -688,7 +686,6 @@ Maintenance schedules:employ regular and thorough maintenance aircraft minimize 
 Overbooking strategies:empty seats caused last-minute cancellation airline use overbooking strategies
 Customer service policies:flexible rebooking compensation policies affected passengers manintain customer satisfaction loyalty.
 Risk monitoring and review:continuously monitor effectiveness,strategies and adjust based on ongoing  data analysis changing condition.
-
 
 
 ChatFPT,Bard,ai assistants,co-pilots,human augmentation(cretiv ewiriting,productivity,video scripts,data analysis,cading summery generation,marketing research, knowlede discorery with Rag,customer services,research assistant
@@ -731,6 +728,5 @@ epoch< 1 to 1000,gc,ypred,loss,backward(loss)
 params.foreach 
 
 Model prediction: predict(xva: Array y.toFloatArray,nm.create(xvalue).reshape
-
 Learning Arbitrary func:N neuraon layer can learn poly with m bend or n+1:anycurve appprozimately with polyline n bends(sufficient large n)
 much more efficient have multiple layers neurons.L layers with n neurons each learn lines with (n pow L) bends.where deep learning
