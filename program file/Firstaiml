@@ -730,3 +730,49 @@ params.foreach
 Model prediction: predict(xva: Array y.toFloatArray,nm.create(xvalue).reshape
 Learning Arbitrary func:N neuraon layer can learn poly with m bend or n+1:anycurve appprozimately with polyline n bends(sufficient large n)
 much more efficient have multiple layers neurons.L layers with n neurons each learn lines with (n pow L) bends.where deep learning
+
+
+
+ML_AI Algo work
+TensorFlow:various type of neural networks
+Pytorch:FAIR flexibiltiy of dynamic computation
+Keras:run top of TensorFlow, Theanon, Microsoft congnitive toolkit(CNTK)
+Caffe:Berkeley AI redearch(BAIR) popular efficiency of CNN
+MXNet: APache 
+
+torch.Tensor----Numpy ndarray
+tensor.autograd.Function---fradients for tensor operations
+torch.nn.Module---neural network architecture
+forwar method--forward pass
+torch.nn.Linear---linear layers
+torch.nn.Conv2d---convolutional layers
+(torch.nn.LSTM, torch.nn.GRU)---recurrent layers
+torch.nn.ReLU---activation function like ReLU
+torch.nn.Sigmoid---sigmoid
+torch.nn.Softmax----softmax
+torch.nn.MSELoss---means squared error
+torch.nn.CrossEntropyLoss---cross-entropy
+torch.optim---used update parameters(SGD,Adam,RMSprop)
+torch.utils.data.DataLoader--loading batching datasets during training.,custom dataset ,data loaders, augmentation
+.to()----cpu to gpu vias
+torch.save()---save model state
+torch.load() load later using
+torchvision.models---transfer learning providing pre-trianed models
+torch.onnx.export()----support exporting trained model
+torch.nn.parallel.DistributedDataParallel---faciliates distributed training by synchronizing 
+torch.utils.tensorboard---third-party libraries pytorch lightning
+torch.utils.data.Dataset and torch.utils.data.DataLoader---create data loaders
+optimizer.zero_grad()---accumulated gradient previous iteration
+loss.backward()---Backpropagation compute gradient of loss with respect model 
+optimizer.step()----update parameters, model parameters
+torchvision.transforms---augmentation transforms, random cropping,
+torch.optim.lr_scheduler--step-based scheduling,exp decay , cosine annealing,custom schedulers
+torch.nn.CrossEntropyLoss---binary classification,
+torch.nn.BCEWithLogitsLoss---Binary Cross-entropy Loss with logits.
+torch.nn.Conv2d---Building convolutional layers
+torch.nn.MaxPool2d---pooling layers
+torch.nn.ReLU---activation functions
+torchvision.models.detection---provides pre-trained object detection
+torch.models.detection.mask_rcnn---pre-trained mask R-CNN
+torch.distributions---for VAEs
+
