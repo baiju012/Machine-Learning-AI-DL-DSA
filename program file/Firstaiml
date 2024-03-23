@@ -775,4 +775,4 @@ torch.nn.ReLU---activation functions
 torchvision.models.detection---provides pre-trained object detection
 torch.models.detection.mask_rcnn---pre-trained mask R-CNN
 torch.distributions---for VAEs
-
+torch.
