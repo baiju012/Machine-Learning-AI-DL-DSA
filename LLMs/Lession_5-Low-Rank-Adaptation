@@ -1,0 +1,87 @@
+# Import required packages
+import copy
+import matplotlib.pyplot as plt
+import numpy as np
+import random
+import time
+import torch
+import torch.nn.functional as F
+from tqdm import tqdm
+
+# Set the seed
+torch.manual_seed(42)
+
+# Create a test Model
+class TestModel(torch.nn.Module):
+    def __init__(self, hidden_size):
+        super().__init__()
+        self.embedding = torch.nn.Embedding(10, hidden_size)
+        self.linear = torch.nn.Linear(hidden_size, hidden_size)
+        self.lm_head = torch.nn.Linear(hidden_size, 10)
+    
+    def forward(self, input_ids):
+        x = self.embedding(input_ids)
+        x = self.linear(x)
+        x = self.lm_head(x)
+        return x
+
+# Define a detokenizer
+detokenizer = [
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "blue",
+    "indigo",
+    "violet",
+    "magenta",
+    "marigold",
+    "chartreuse",
+]
+
+# Define the generate token function
+def generate_token(model, **kwargs):
+    with torch.no_grad():
+        logits = model(**kwargs)
+    last_logits = logits[:, -1, :]
+    next_token_ids = last_logits.argmax(dim=1)
+    return [detokenizer[token_id] for token_id in next_token_ids]
+
+# Define a dummy input tensor
+X = torch.randn(1, 8, 1024)
+
+# Set up the LoRA computation
+lora_a = torch.randn(1024, 2)
+lora_b = torch.randn(2, 1024)
+W = model.linear.weight
+W2 = lora_a @ lora_b
+lora_numel = lora_a.numel() + lora_b.numel()
+base_numel = W.numel()
+print("|A+B| / |W|:", lora_numel / base_numel)
+
+# Run the LoRA computation
+base_output = model.linear(X)
+lora_output = X @ lora_a @ lora_b
+total_output = base_output + lora_output
+
+# Define the LoRA layer
+class LoraLayer(torch.nn.Module):
+    def __init__(self, base_layer, r):
+        super().__init__()
+        self.base_layer = base_layer
+        d_in, d_out = self.base_layer.weight.shape
+        self.lora_a = torch.randn(d_in, r)
+        self.lora_b = torch.randn(r, d_out) 
+        
+    def forward(self, x):
+        y1 = self.base_layer(x)
+        y2 = x @ self.lora_a @ self.lora_b
+        return y1 + y2
+
+# Wrap the linear layer with LoRA
+lora_layer = LoraLayer(model.linear, 2)
+model.linear = lora_layer
+
+# Generate token after adding the LoRA layer
+next_token = generate_token(model, input_ids=input_ids)
+next_token[0]
