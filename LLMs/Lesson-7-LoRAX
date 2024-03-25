@@ -1,0 +1,169 @@
+import asyncio
+import json
+import time
+from typing import List
+
+import matplotlib.pyplot as plt
+from tqdm.notebook import tqdm
+from pydantic import BaseModel, constr
+
+from lorax import AsyncClient, Client
+
+# Initialize the Lorax client
+client = Client(endpoint_url, headers=headers)
+
+# Prefill vs Decode (KV Cache)
+t0 = time.time()
+resp = client.generate("What is deep learning?", max_new_tokens=32)
+duration_s = time.time() - t0
+
+print(resp.generated_text)
+print("\n\n----------")
+print("Request duration (s):", duration_s)
+
+durations_s = []
+
+t0 = time.time()
+for resp in client.generate_stream("What is deep learning?", max_new_tokens=32):
+    durations_s.append(time.time() - t0)
+    if not resp.token.special:
+        print(resp.token.text, sep="", end="", flush=True)
+    t0 = time.time()
+
+print("\n\n\n----------")
+print("Time to first token (TTFT) (s):", durations_s[0])
+print("Throughput (tok / s):", (len(durations_s) - 1) / sum(durations_s[1:]))
+plt.plot(durations_s)
+plt.show()
+
+# Continuous Batching
+color_codes = [
+    "31",  # red
+    "32",  # green
+    "34",  # blue
+]
+
+
+def format_text(text, i):
+    return f"\x1b[{color_codes[i]}m{text}\x1b[0m"
+
+
+async_client = AsyncClient(endpoint_url, headers=headers)
+
+durations_s = [[], [], []]
+
+
+async def run(max_new_tokens, i):
+    t0 = time.time()
+    async for resp in async_client.generate_stream("What is deep learning?", max_new_tokens=max_new_tokens):
+        durations_s[i].append(time.time() - t0)
+        print(format_text(resp.token.text, i), sep="", end="", flush=True)
+        t0 = time.time()
+
+
+t0 = time.time()
+all_max_new_tokens = [100, 10, 10]
+await asyncio.gather(*[run(max_new_tokens, i) for i, max_new_tokens in enumerate(all_max_new_tokens)])
+
+print("\n\n\n----------")
+print("Time to first token (TTFT) (s):", [s[0] for s in durations_s])
+print("Throughput (tok / s):", [(len(s) - 1) / sum(s[1:]) for s in durations_s])
+print("Total duration (s):", time.time() - t0)
+
+# Multi-LoRA
+def run_with_adapter(prompt, adapter_id):
+    durations_s = []
+
+    t0 = time.time()
+    for resp in client.generate_stream(
+        prompt,
+        adapter_id=adapter_id,
+        adapter_source="hub",
+        max_new_tokens=64,
+    ):
+        durations_s.append(time.time() - t0)
+        if not resp.token.special:
+            print(resp.token.text, sep="", end="", flush=True)
+        t0 = time.time()
+
+    print("\n\n\n----------")
+    print("Time to first token (TTFT) (s):", durations_s[0])
+    print("Throughput (tok / s):", (len(durations_s) - 1) / sum(durations_s[1:]))
+
+
+pt_hellaswag_processed = \
+    """You are provided with an incomplete passage below. Please read the passage and then finish it with an appropriate response. For example:
+​
+### Passage: My friend and I think alike. We
+​
+### Ending: often finish each other's sentences.
+​
+Now please finish the following passage:
+​
+### Passage: {ctx}
+​
+### Ending: """
+
+ctx = "Numerous people are watching others on a field. Trainers are playing frisbee with their dogs. the dogs"
+
+
+run_with_adapter(pt_hellaswag_processed.format(ctx=ctx), adapter_id="predibase/hellaswag_processed")
+
+pt_cnn = \
+    """You are given a news article below. Please summarize the article, including only its highlights.
+​
+### Article: {article}
+​
+### Summary: """
+
+article = "(CNN)Former Vice President Walter Mondale was released from the Mayo Clinic on Saturday after being admitted with influenza, hospital spokeswoman Kelley Luckstein said. \"He's doing well. We treated him for flu and cold symptoms and he was released today,\" she said. Mondale, 87, was diagnosed after he went to the hospital for a routine checkup following a fever, former President Jimmy Carter said Friday. \"He is in the bed right this moment, but looking forward to come back home,\" Carter said during a speech at a Nobel Peace Prize Forum in Minneapolis. \"He said tell everybody he is doing well.\" Mondale underwent treatment at the Mayo Clinic in Rochester, Minnesota. The 42nd vice president served under Carter between 1977 and 1981, and later ran for President, but lost to Ronald Reagan. But not before he made history by naming a woman, U.S. Rep. Geraldine A. Ferraro of New York, as his running mate. Before that, the former lawyer was  a U.S. senator from Minnesota. His wife, Joan Mondale, died last year."
+
+run_with_adapter(pt_cnn.format(article=article), adapter_id="predibase/cnn")
+
+pt_conllpp = """
+Your task is a Named Entity Recognition (NER) task. Predict the category of
+each entity, then place the entity into the list associated with the 
+category in an output JSON payload. Below is an example:
+​
+Input: EU rejects German call to boycott British lamb . Output: {{"person":
+[], "organization": ["EU"], "location": [], "miscellaneous": ["German",
+"British"]}}
+​
+Now, complete the task.
+​
+Input: {inpt} Output:"""
+
+inpt = "Only France and Britain backed Fischler 's proposal ."
+
+run_with_adapter(pt_conllpp.format(inpt=inpt), adapter_id="predibase/conllpp")
+
+durations_s = [[], [], []]
+
+
+async def run(prompt, adapter_id, i):
+    t0 = time.time()
+    async for resp in async_client.generate_stream(
+        prompt,
+        adapter_id=adapter_id,
+        adapter_source="hub",
+        max_new_tokens=64,
+    ):
+        durations_s[i].append(time.time() - t0)
+        if not resp.token.special:
+            print(format_text(resp.token.text, i), sep="", end="", flush=True)
+        t0 = time.time()
+
+
+t0 = time.time()
+prompts = [
+    pt_hellaswag_processed.format(ctx=ctx),
+    pt_cnn.format(article=article),
+    pt_conllpp.format(inpt=inpt),
+]
+adapter_ids = ["predibase/hellaswag_processed", "predibase/cnn", "predibase/conllpp"]
+await asyncio.gather(*[run(prompt, adapter_id, i)
+                       for i, (prompt, adapter_id) in enumerate(zip(prompts, adapter_ids))])
+
+print("\n\n\n----------")
+print("Time to first token (TTFT) (s):", [s[0] for s in durations_s])
+print("Throughput (tok / s):", [(len(s) - 1) / sum(s[1:]) for s in durations_s
