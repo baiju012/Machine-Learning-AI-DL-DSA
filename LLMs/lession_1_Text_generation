@@ -1,0 +1,135 @@
+# Import required packages
+import matplotlib.pyplot as plt
+import numpy as np
+import time
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Load the LLM
+# You'll use GPT2 throughout this course
+model_name = "./models/gpt2"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name)
+
+# Examine the model's architecture
+print(model)
+
+# Start by tokenizing the input prompt
+prompt = "The quick brown fox jumped over the"
+inputs = tokenizer(prompt, return_tensors="pt")
+
+# Pass the inputs to the model and retrieve the logits to find the most likely next token
+with torch.no_grad():
+    outputs = model(**inputs)
+
+logits = outputs.logits
+print(logits.shape)
+last_logits = logits[0, -1, :]
+next_token_id = last_logits.argmax()
+
+# Decode the most likely token
+print(tokenizer.decode(next_token_id))
+
+# Print the 10 most likely next words
+top_k = torch.topk(last_logits, k=10)
+tokens = [tokenizer.decode(tk) for tk in top_k.indices]
+print(tokens)
+
+# Concatenate the input and most likely tokens
+next_inputs = {
+    "input_ids": torch.cat(
+        [inputs["input_ids"], next_token_id.reshape((1, 1))],
+        dim=1
+    ),
+    "attention_mask": torch.cat(
+        [inputs["attention_mask"], torch.tensor([[1]])],
+        dim=1
+    ),
+}
+print(next_inputs["input_ids"],
+      next_inputs["input_ids"].shape)
+print(next_inputs["attention_mask"],
+      next_inputs["attention_mask"].shape)
+
+# Text generation helper function
+# The following helper function generates the next tokens given a set of input tokens
+def generate_token(inputs):
+    with torch.no_grad():
+        outputs = model(**inputs)
+
+    logits = outputs.logits
+    last_logits = logits[0, -1, :]
+    next_token_id = last_logits.argmax()
+    return next_token_id
+
+# Use the helper function to generate multiple tokens in a loop
+# Track the time it takes to generate each token
+generated_tokens = []
+next_inputs = inputs
+durations_s = []
+for _ in range(10):
+    t0 = time.time()
+    next_token_id = generate_token(next_inputs)
+    durations_s += [time.time() - t0]
+
+    next_inputs = {
+        "input_ids": torch.cat(
+            [next_inputs["input_ids"], next_token_id.reshape((1, 1))],
+            dim=1),
+        "attention_mask": torch.cat(
+            [next_inputs["attention_mask"], torch.tensor([[1]])],
+            dim=1),
+    }
+
+    next_token = tokenizer.decode(next_token_id)
+    generated_tokens.append(next_token)
+
+print(f"{sum(durations_s)} s")
+print(generated_tokens)
+
+# Plot token generation time
+# The x-axis here is the token number
+# The y-axis is the time to generate a token in milliseconds (ms)
+plt.plot(durations_s)
+plt.show()
+
+# Speeding up text generation with KV-caching
+# KV-caching is a technique to speed up token generation by storing some of the tensors in the attention head for use in subsequent generation steps
+
+# Modify the generate helper function to return the next token and the key/value tensors
+def generate_token_with_past(inputs):
+    with torch.no_grad():
+        outputs = model(**inputs)
+
+    logits = outputs.logits
+    last_logits = logits[0, -1, :]
+    next_token_id = last_logits.argmax()
+    return next_token_id, outputs.past_key_values
+
+# Generate 10 tokens using the updated helper function
+generated_tokens = []
+next_inputs = inputs
+durations_cached_s = []
+for _ in range(10):
+    t0 = time.time()
+    next_token_id, past_key_values = generate_token_with_past(next_inputs)
+    durations_cached_s += [time.time() - t0]
+
+    next_inputs = {
+        "input_ids": next_token_id.reshape((1, 1)),
+        "attention_mask": torch.cat(
+            [next_inputs["attention_mask"], torch.tensor([[1]])],
+            dim=1),
+        "past_key_values": past_key_values,
+    }
+
+    next_token = tokenizer.decode(next_token_id)
+    generated_tokens.append(next_token)
+
+print(f"{sum(durations_cached_s)} s")
+print(generated_tokens)
+
+# Compare the execution time for the KV-cache function with the original helper function
+plt.plot(durations_s)
+plt.plot(durations_cached_s)
+plt.show()
