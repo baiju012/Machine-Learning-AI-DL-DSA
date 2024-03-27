@@ -16,7 +16,7 @@
 # Genrate newthing
 # Language prediction
 # Story generater
-# Movie dialog prediction By kaggle_movie_train
+# Movie dialog prediction By kaggle_movie_train dataset
 # Music player
 
 
