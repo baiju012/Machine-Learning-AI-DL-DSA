@@ -15,11 +15,13 @@
 # Chatboat
 # Genrate newthing
 # spam detection
+# Fraud detection
+# Question answer model
 # Language prediction
 # Story generater
 # Movie dialog prediction By kaggle_movie_train dataset
 # Music player
-
-
+# Stable defusion Image generation model
+# Building brain by help of nvidia institution
 
 
