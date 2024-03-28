@@ -14,6 +14,7 @@
 # Spam or Ham
 # Chatboat
 # Genrate newthing
+# spam detection
 # Language prediction
 # Story generater
 # Movie dialog prediction By kaggle_movie_train dataset
