@@ -24,5 +24,5 @@
 # Stable defusion Image generation model
 # Building brain by help of nvidia institution
 
- --Diabities pridiction by kaggle_diabities dataset and integrated with flask
+# Diabities pridiction by kaggle_diabities dataset and integrated with flask
 
