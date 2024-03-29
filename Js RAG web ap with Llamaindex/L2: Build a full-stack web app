@@ -1,0 +1,61 @@
+// Backend code
+const handler = async (req) => {
+    if (req.method == "POST") {
+        // we'll expect the incoming query to be a JSON object of the form {query: ...}
+        let data = await req.json();
+        let answer = await queryEngine.query({ query: data.query });
+        // and our response will be a JSON object of the form {response: ...}
+        let responseObj = {
+            response: answer.toString()
+        };
+        return new Response(JSON.stringify(responseObj), {
+            status: 200
+        });
+    } else {
+        return new Response("Not found", { status: 404 });
+    }
+};
+
+let server = Deno.serve({ port: 8001 }, handler);
+console.log('Listening on http://localhost:8001/');
+
+// Frontend code
+import React, { useState } from 'https://esm.sh/react@17.0.2';
+
+const QuerySender: React.FC = () => {
+    const [query, setQuery] = useState<string>('');
+    const [answer, setAnswer] = useState<string>('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setAnswer("Thinking...");
+        const response = await fetch('http://localhost:8001', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ query }),
+        });
+        const data = await response.json();
+        console.log('Response from the server:', data);
+        setAnswer(data.response);
+    };
+
+    // Function to update the state with the input value
+    const handleChange = (e) => {
+        setQuery(e.target.value);
+    };
+
+    return (
+        <div>
+            <h1>Ask a question</h1>
+            <form onSubmit={handleSubmit}>
+                <input id="query" type="text" value={query} onChange={handleChange} />
+                <button type="submit">Query</button>
+            </form>
+            <div id="answer">{answer}</div>
+        </div>
+    );
+};
+
+export default QuerySender;
