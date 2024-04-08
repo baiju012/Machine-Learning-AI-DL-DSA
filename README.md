@@ -17,7 +17,9 @@
 # spam detection
 # Fraud detection
 # Question answer model
-# Language prediction
+# Language prediction and generation from seed
+![image](https://github.com/baiju012/Machine-Learning-AI-/assets/111991510/86faa89c-fe0c-40a8-aec3-66bc21f137a7)
+
 # Story generater
 # Movie dialog prediction By kaggle_movie_train dataset
 ![image](https://github.com/baiju012/Machine-Learning-AI-/assets/111991510/230d1b82-2216-420f-9159-13a5620a46ad)
