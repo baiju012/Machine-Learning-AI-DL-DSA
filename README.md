@@ -31,3 +31,5 @@
 # Diabities pridiction by kaggle_diabities dataset and integrated with flask
 ![image](https://github.com/baiju012/Machine-Learning-AI-/assets/111991510/13840496-0d68-4fb7-9f2d-b2a1964d1dd1)
 
+# Window Alert to take rest
+![image](https://github.com/baiju012/Machine-Learning-AI-/assets/111991510/eb3941f0-fb07-47a1-b50a-b19af62fe066)
