@@ -27,5 +27,5 @@
 # Building brain by help of nvidia institution
 
 # Diabities pridiction by kaggle_diabities dataset and integrated with flask
-![image](https://github.com/baiju012/Machine-Learning-AI-/assets/111991510/aa3a36fa-fd19-489f-8f31-7f807a2d58ad)
+![image](https://github.com/baiju012/Machine-Learning-AI-/assets/111991510/13840496-0d68-4fb7-9f2d-b2a1964d1dd1)
 
