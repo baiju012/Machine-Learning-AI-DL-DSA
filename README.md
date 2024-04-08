@@ -23,6 +23,8 @@
 ![image](https://github.com/baiju012/Machine-Learning-AI-/assets/111991510/230d1b82-2216-420f-9159-13a5620a46ad)
 
 # Music player
+![image](https://github.com/baiju012/Machine-Learning-AI-/assets/111991510/e1c9b961-492e-47e2-824e-d67bd0acac0a)
+
 # Stable defusion Image generation model
 # Building brain by help of nvidia institution
 
