@@ -1,1 +1,11 @@
 By architecture and diagram so that easly understand.
+
+
+Pascal's Trangle:
+The triangle starts with a 1 at the top, and each subsequent number is the sum of the two numbers directly above it
+Each row of the triangle corresponds to the coefficients of the binomial expansion of (a + b)^n, where n is the row number (starting from 0). For example, the fourth row (1 3 3 1) corresponds to the expansion of (a + b)^3, which is a^3 + 3a^2b + 3ab^2 + b^3.
+
+Set Matrix Zeros
+One way to solve the problem is to use two arrays to keep track of the rows and columns that contain a zero. Then, iterate through the matrix and mark the corresponding row or column in the arrays if a zero is found. Finally, iterate through the matrix again and set any element to zero if its row or column was marked in the arrays
+This solution has a time complexity of O(mn), where m is the number of rows and n is the number of columns in the matrix. It also has a space complexity of O(m + n) for the two arrays.
+
