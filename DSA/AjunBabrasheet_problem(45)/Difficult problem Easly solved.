@@ -10,3 +10,4 @@ One way to solve the problem is to use two arrays to keep track of the rows and 
 This solution has a time complexity of O(mn), where m is the number of rows and n is the number of columns in the matrix. It also has a space complexity of O(m + n) for the two arrays.
 
 WE WILL START VERY SOON.
+I left from 15 april to 30 april now.
