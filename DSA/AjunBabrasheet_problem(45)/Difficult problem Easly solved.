@@ -11,3 +11,13 @@ This solution has a time complexity of O(mn), where m is the number of rows and 
 
 WE WILL START VERY SOON.
 I left from 15 april to 30 april now.
+
+
+
+CODING INTERVIEW MISTAKES
+
+NOT CLARIFYING THE PROBLEM: candidates jump to problem without asking additional question moment prompt shared with them interviewer may correct them. if they dont candidate won;t realize they solbing wrong problem
+
+FOCUSING ON UMIMPOTANT DETAILS: if problem is about using binary search, then focus more on larger parts and come back to the smaller details some spend half interview thinking about null exceptions or wrong input never get actually solving question
+
+STAYING QUIET: Candidate going to get stuck interviewers know this , candidate needs to do know what questions to ask, think out loud, share thoughts and take intervieers input. Most candidates dead silent udually blc 
