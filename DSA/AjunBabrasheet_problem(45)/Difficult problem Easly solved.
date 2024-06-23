@@ -230,3 +230,74 @@ int main() {
   return 0;
 }
 
+Learn Python
+
+Output / Print in Python
+Variables and datatypes
+Strings
+Taking input from users
+Conditional statements
+How to debug your code
+Arrays and Loops
+Functions in python
+Tuples and Dictionary
+Getting started with algorithmic problems
+
+
+
+Maximum, Minimum, Average
+Divisibility, Remainder, Absolute values
+Basic mathematical equations with conditions
+Greatest common divisor
+Largest common multiple
+Arithmetic progression
+Sum of digits of a number
+
+
+Array Traversal
+Maximum and second maximum of an Array
+Comparing multiple Arrays
+Conditions on Arrays
+Aggregation on Arrays
+Constructing an Array based on conditions
+
+Practice Strings
+
+String traversal
+Compare two strings
+Compare consecutive elements on a single string
+Check for Palindrome
+Convert string to integer
+Convert string to title case
+Check if two strings are Anagrams
+Substring check
+Binary strings
+Represent big integers using string
+
+
+Practice Sorting
+
+Using inbuilt sorting functions
+Sorting an Array of elements
+Reverse sorting
+Sorting an Array of pairs
+Sorting using custom sort function
+Counting sort
+Sort multiple arrays
+
+
+Time complexity
+
+Fundamentals of Time Complexity
+Applying time complexity to DSA problems
+Log and Square root time complexity
+Practice problems
+
+Python Projects
+
+Number guessing game
+Build a Calculator
+Build a digital clock
+Password Generator
+Rock, Paper & Scissors game
+Hangman: The word game
