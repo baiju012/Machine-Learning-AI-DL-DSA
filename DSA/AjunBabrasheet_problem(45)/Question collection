@@ -1,0 +1,102 @@
+Recurssion tree, stack space,problem on recurssion
+Parameterise and function recursion, problem on fundamental recursion
+
+Multiplenrecursion calls
+Hashing, maps, collision , division rule
+Sorting,selection, bubble, insertion
+
+Merge sort
+
+Quick sort
+Second largest element in array,remove dublicate from array 
+Rotate array by k place 
+, union, intersection
+Move zero to end
+Find element that appear once
+Find missing number
+Max consucutive 
+No of 1's
+
+Longest sub array with k sum(brute, batter, optimal)
+
+Two sum problem(brute,bruttle,optimal)
+
+Sort an array of 0's1's 2's intution of algo
+Majority element , more voting algo
+Max sub array sum, kaoban algo
+Best time to buy and sell stock
+Rearrange array element by sign(2)
+Next permultation
+Leader in an array 
+Longest consucutive sequence(3)
+Set matrix zero(3)
+Rotate matrix,3
+Spiral traversal of matrix
+Count sub array sum equal to k,3
+Pareal trangle, finding, near in mov time
+
+3sum,3
+4 sum
+Numbet of sub array with xor,3
+Merge of overlapping interval,3
+Merge sort array without extra space,optimal
+
+Fimd missing and repeating number,4 approaches
+Count inversion in an array ,2
+Reverse pair
+Max product sub array,best approach
+Binary search,iterative,recursive
+Implement lower bound and upper bound, search inserat position
+First and last occutrence in array(count occurence)
+Search element in rotated sorted array
+
+
+
+Min in rotated array
+How many time array rotated
+Single element in sorted sorted
+Peak element
+Sqrt of number using binary search
+Nth root of an integer
+Kako eating banana, return min int ksok
+
+Min day to make m bounquets, binary search
+
+Find smallest diviaion given a th result
+
+Capacity to ship package within d days
+
+Kth missing positive number binary search
+
+Aggressive cows , binary search heard
+
+Alocate book or book alocation
+Painter partition and split array , largest sum
+
+Minmize max distance to gas stations , heap, binary search
+Median of two sorted array of diffrent size
+
+Kth element of 1s , binary search on 2d
+
+Search in 2d matrix, binary search of 2D
+
+Find peak binary search
+Median in a row wise sorted matrix
+
+Full tree
+Complete tree
+Perfect tree
+Balance tree bt
+Dequrate tree
+Binary tree traversal
+BFS,DFS
+
+Pre order traversal of binary tree
+
+In order traversal of binary tree
+
+
+Postorder traversal bt
+Level order traversal bt
+Iterative preorder traversal
+Itrative inorder postorder
