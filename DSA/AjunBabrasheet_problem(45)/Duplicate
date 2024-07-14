@@ -1,0 +1,46 @@
+1. Contains Duplicate
+
+Array of integer num, return true if any value appears at least twice in array and return false if every element is distinct.
+
+Ex1- num = [1,2,3,2]
+
+output-true
+
+
+
+Ex2- num = [1,2,3,4]
+
+output-false
+
+
+
+Brute Force Approach-
+
+You might get to solve comparing an element with every element in the array.
+
+Time complexity: O(n²)
+
+Space Complexity: O(1)
+
+
+
+Better Approach: Sorting 
+
+sort array in ascending order and compare adjacent element to identify duplicates.
+
+Time Complexity: O(nlogn), for sorting array
+
+Space Complexity: O(n), for storing the sorted array.
+
+
+
+Optimized Approach: Hash Set
+
+Using hash set to store encountered elements. while iterating through array, if element is in hash set, return true, otherwise, add element hash set. If loop completes without discovering any duplicates, return false.
+
+
+
+Time Complexity: O(n)
+
+Space Complexity: O(n), additional space(hashset) is used.
+
